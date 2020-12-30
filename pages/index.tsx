@@ -62,6 +62,8 @@ export async function getStaticProps({
 
   return {
     props: {
+      front: process.env.BIGCOMMERCE_STOREFRONT_API_TOKEN,
+      store: process.env.BIGCOMMERCE_STORE_API_TOKEN,
       featured,
       bestSelling,
       newestProducts,
