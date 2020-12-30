@@ -120,6 +120,8 @@ export default function Home({
         It is our pleasure to serve you the way that you deserve to be served. Our on-island team will be happy to 
         support you with what ever you need while you are on vacation. "
       />
+      <div>This is the store: {store}</div>
+      <div>This is the front: {front}</div>
       <Grid layout="B">
 
 a
