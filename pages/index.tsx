@@ -109,17 +109,17 @@ export default function Home({
         ))}
       </Marquee>
       <Hero
-        headline="Release Details: The Yeezy BOOST 350 V2 ‘Natural'"
+        headline="St. John Fresh: Delivering freshness to your door."
         description="
-        The Yeezy BOOST 350 V2 lineup continues to grow. We recently had the
-        ‘Carbon’ iteration, and now release details have been locked in for
-        this ‘Natural’ joint. Revealed by Yeezy Mafia earlier this year, the
-        shoe was originally called ‘Abez’, which translated to ‘Tin’ in
-        Hebrew. It’s now undergone a name change, and will be referred to as
-        ‘Natural’."
+        Our mission is simple. Provide our customer with the freshest, timeliest, best food from local vendors. 
+        It is our pleasure to serve you the way that you deserve to be served. Our on-island team will be happy to 
+        support you with what ever you need while you are on vacation. "
       />
       <Grid layout="B">
-        {featured.slice(3, 6).map(({ node }, i) => (
+
+a
+
+               {featured.slice(3, 6).map(({ node }, i) => (
           <ProductCard
             key={node.path}
             product={node}
