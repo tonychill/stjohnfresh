@@ -62,8 +62,6 @@ export async function getStaticProps({
 
   return {
     props: {
-      front: process.env.BIGCOMMERCE_STOREFRONT_API_TOKEN,
-      store: process.env.BIGCOMMERCE_STORE_API_TOKEN,
       featured,
       bestSelling,
       newestProducts,
@@ -78,15 +76,14 @@ export async function getStaticProps({
 const nonNullable = (v: any) => v
 
 export default function Home({
-  store, 
-  front,
+
   featured,
   bestSelling,
   brands,
   categories,
   newestProducts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log('store: ', store, 'front', front);
+
   return (
     <div>
       <Grid>
@@ -120,8 +117,7 @@ export default function Home({
         It is our pleasure to serve you the way that you deserve to be served. Our on-island team will be happy to 
         support you with what ever you need while you are on vacation. "
       />
-      <div>This is the store: {store}</div>
-      <div>This is the front: {front}</div>
+    
       <Grid layout="B">
 
 a
