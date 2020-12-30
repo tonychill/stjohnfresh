@@ -78,12 +78,15 @@ export async function getStaticProps({
 const nonNullable = (v: any) => v
 
 export default function Home({
+  store, 
+  front,
   featured,
   bestSelling,
   brands,
   categories,
   newestProducts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log('store: ', store, 'front', front);
   return (
     <div>
       <Grid>
