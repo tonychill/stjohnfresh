@@ -14,8 +14,9 @@ export async function getStaticProps({
   preview,
   locale,
 }: GetStaticPropsContext) {
-  const config = getConfig({ locale })
-
+      const config = getConfig({ locale })
+      console.log(config)
+      console.log(process.env)
   // Get Featured Products
   const { products: featuredProducts } = await getAllProducts({
     variables: { field: 'featuredProducts', first: 6 },
