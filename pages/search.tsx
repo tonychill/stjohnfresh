@@ -50,6 +50,7 @@ export default function Search({
   const router = useRouter()
   const { asPath } = router
   const { q, sort } = router.query
+  console.log(sort);
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
