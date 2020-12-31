@@ -50,27 +50,33 @@ export default function Search({
   const router = useRouter()
   const { asPath } = router
   const { q, sort } = router.query
-  console.log(sort);
+  console.log("q: ", q)
+  console.log("sort: ", sort)
+  console.log(asPath)
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
   const query = filterQuery({ sort })
+  console.log("query object from filterQuery func", query)
 
   const { pathname, category, brand } = useSearchMeta(asPath)
   const activeCategory = categories.find(
     (cat) => getSlug(cat.path) === category
   )
+  console.log('category and brand objects from the useSearchMeta function: ', category , brand)
+  console.log("activeCategory", activeCategory)
+
   const activeBrand = brands.find(
     (b) => getSlug(b.node.path) === `brands/${brand}`
   )?.node
-
+console.log("activeBrand: ", activeBrand)
   const { data } = useSearch({
     search: typeof q === 'string' ? q : '',
     categoryId: activeCategory?.entityId,
     brandId: activeBrand?.entityId,
     sort: typeof sort === 'string' ? sort : '',
   })
-
+console.log("data from useSearch func", data)
   const handleClick = (event: any, filter: string) => {
     if (filter !== activeFilter) {
       setToggleFilter(true)
@@ -285,7 +291,7 @@ export default function Search({
             </div>
           </div>
         </div>
-        {/* Products */}
+        {/* Products Section */}
         <div className="col-span-8 order-3 lg:order-none">
           {(q || activeCategory || activeBrand) && (
             <div className="mb-12 transition ease-in duration-75">
