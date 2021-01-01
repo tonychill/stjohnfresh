@@ -49,7 +49,7 @@ export default function Blog() {
       </div>
       <Container>
         <div className="-mt-96 mx-auto">
-          <img src="/jacket.png" alt="Jacket" />
+          <img src="https://img.favpng.com/19/11/25/basket-of-fruit-food-gift-baskets-hamper-png-favpng-EiavRAYGFUZU7TNYwhhHiggqe.jpg" alt="Jacket" />
         </div>
         {/** Replace by HTML Content */}
         <div className="text-lg leading-7 font-medium py-6 text-justify max-w-6xl mx-auto">
