@@ -34,7 +34,7 @@ const Navbar: FC = () => {
               </a>
             </Link>
             <nav className="hidden ml-6 space-x-4 lg:block">
-              <Link href="/search">
+              {/* <Link href="/search">
                 <a className={s.link}>All</a>
               </Link>
               <Link href="/search?q=specials">
@@ -42,7 +42,7 @@ const Navbar: FC = () => {
               </Link>
               <Link href="/search?q=packages">
                 <a className={s.link}>Packages</a>
-              </Link>
+              </Link> */}
             </nav>
           </div>
 
