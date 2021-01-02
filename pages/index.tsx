@@ -39,7 +39,7 @@ export async function getStaticProps({
 
   const { categories, brands } = await getSiteInfo({ config, preview })
   const { pages } = await getAllPages({ config, preview })
-
+console.log(pages)
   // These are the products that are going to be displayed in the landing.
   // We prefer to do the computation at buildtime/servertime
   const { featured, bestSelling } = (() => {
