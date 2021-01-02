@@ -57,26 +57,22 @@ export default function Search({
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
   const query = filterQuery({ sort })
-  console.log("query object from filterQuery func", query)
 
   const { pathname, category, brand } = useSearchMeta(asPath)
   const activeCategory = categories.find(
     (cat) => getSlug(cat.path) === category
   )
-  console.log('category and brand objects from the useSearchMeta function: ', category , brand)
-  console.log("activeCategory", activeCategory)
-
   const activeBrand = brands.find(
     (b) => getSlug(b.node.path) === `brands/${brand}`
   )?.node
-console.log("activeBrand: ", activeBrand)
+
   const { data } = useSearch({
     search: typeof q === 'string' ? q : '',
     categoryId: activeCategory?.entityId,
     brandId: activeBrand?.entityId,
     sort: typeof sort === 'string' ? sort : '',
   })
-console.log("data from useSearch func", data)
+
   const handleClick = (event: any, filter: string) => {
     if (filter !== activeFilter) {
       setToggleFilter(true)
@@ -152,7 +148,7 @@ console.log("data from useSearch func", data)
                             'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
                           }
                         >
-                          Everything
+                          All Categories
                         </a>
                       </Link>
                     </li>
@@ -291,7 +287,7 @@ console.log("data from useSearch func", data)
             </div>
           </div>
         </div>
-        {/* Products Section */}
+        {/* Products */}
         <div className="col-span-8 order-3 lg:order-none">
           {(q || activeCategory || activeBrand) && (
             <div className="mb-12 transition ease-in duration-75">
