@@ -392,7 +392,7 @@ export default function Search({
                 </button>
               </span>
             </div>
-            <div
+            {/* <div
               className={`origin-top-left absolute lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
                 activeFilter !== 'sort' || toggleFilter !== true ? 'hidden' : ''
               }`}
@@ -453,8 +453,8 @@ export default function Search({
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>*/}
+          </div> 
         </div>
       </div>
     </Container>
