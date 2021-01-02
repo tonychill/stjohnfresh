@@ -152,7 +152,10 @@ export default function Search({
                         </a>
                       </Link>
                     </li>
-                    {categories.map((cat) => (
+                    {categories.map((cat) => {
+                      console.log(cat)
+                      console.log(brand)
+                      return (
                       <li
                         key={cat.path}
                         className={cn(
@@ -179,7 +182,7 @@ export default function Search({
                           </a>
                         </Link>
                       </li>
-                    ))}
+                    )})}
                   </ul>
                 </div>
               </div>
