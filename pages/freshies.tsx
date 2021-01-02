@@ -41,18 +41,18 @@ const SORT = Object.entries({
 })
 
 export default function Search({
-  categories,
+  categories, 
+  pages,
   brands,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)
-
+console.log(pages)
   const router = useRouter()
   const { asPath } = router
   const { q, sort } = router.query
   console.log("q: ", q)
   console.log("sort: ", sort)
-  console.log(asPath)
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
