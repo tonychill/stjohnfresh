@@ -30,7 +30,8 @@ const Navbar: FC = () => {
           <div className="flex items-center flex-1">
             <Link href="/">
               <a className={s.logo} aria-label="Logo">
-                <Logo /> St. John Fresh
+                <Logo />
+                <span className={s.logo_text}>St. John Fresh</span>
               </a>
             </Link>
             <nav className="hidden ml-6 space-x-4 lg:block">

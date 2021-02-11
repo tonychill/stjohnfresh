@@ -16,9 +16,20 @@
 
 .logo {
   @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
+  display: flex;
+  border: none;
 
   &:hover {
     @apply shadow-md;
     transform: scale(1.05);
   }
 }
+
+.logo_text {
+  margin-left: 13px;
+  align-self: center;
+}
+/* .adj {
+  display: flex;
+  border: none;
+} */
