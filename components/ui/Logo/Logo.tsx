@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import s from './Logo.module.css'
 const Logo = ({ className = '', ...props }) => (
   <Fragment>
     <svg

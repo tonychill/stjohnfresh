@@ -25,7 +25,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
     <footer className={rootClassName}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
-          <div className="col-span-1 lg:col-span-2">
+          {/* <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex flex-initial items-center font-bold md:mr-24">
                 <span className="rounded-full border mr-2">
@@ -33,7 +33,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 </span>
               </a>
             </Link>
-          </div>
+          </div> */}
           <div className="col-span-1 lg:col-span-2">
             <ul className="flex flex-initial flex-col md:flex-1">
               {/* <li className="py-3 md:py-0 md:pb-4">
@@ -100,9 +100,14 @@ const Footer: FC<Props> = ({ className, pages }) => {
           </div>
           <div className="flex items-center text-primary">
             <span className="text-primary">
-              Part of the @
+              Part of the
               <span>
-                <a href="bit.ly/sjfresh01">enjoythevi</a>
+                <a
+                  style={{ color: '#61bdff', fontWeight: 600 }}
+                  href="bit.ly/sjfresh01"
+                >
+                  @enjoythevi
+                </a>
               </span>{' '}
               family.
             </span>

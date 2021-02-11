@@ -21,7 +21,8 @@ export default function Blog() {
       <div className="text-center pt-40 pb-56 bg-violet">
         <Container>
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
-            Welcome to St. John Fresh. The simplest and most convenient way to order and get fresh food to your villa.
+            Welcome to St. John Fresh. The simplest and most convenient way to
+            order and get fresh food to your villa.
           </h2>
           <p className="mt-3 max-w-md mx-auto text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Nothing here yet. But it is coming soon!!!
@@ -37,10 +38,13 @@ export default function Blog() {
               </div>
               <div className="ml-4">
                 <div className="leading-6 font-medium text-white">
-                  José Rodriguez
+                  Tony Hill{' '}
                 </div>
                 <div className="leading-6 font-medium text-gray-200">
-                  CEO, Acme
+                  Captain,{' '}
+                  <span>
+                    <a href="https://www.enjoythevi.com">@enjoythevi</a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -49,7 +53,10 @@ export default function Blog() {
       </div>
       <Container>
         <div className="-mt-96 mx-auto">
-          <img src="https://img.favpng.com/19/11/25/basket-of-fruit-food-gift-baskets-hamper-png-favpng-EiavRAYGFUZU7TNYwhhHiggqe.jpg" alt="Jacket" />
+          <img
+            src="https://img.favpng.com/19/11/25/basket-of-fruit-food-gift-baskets-hamper-png-favpng-EiavRAYGFUZU7TNYwhhHiggqe.jpg"
+            alt="Jacket"
+          />
         </div>
         {/** Replace by HTML Content */}
         <div className="text-lg leading-7 font-medium py-6 text-justify max-w-6xl mx-auto">
