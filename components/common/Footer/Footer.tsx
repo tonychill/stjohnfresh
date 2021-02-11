@@ -100,7 +100,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             <span>&copy; 2020 St. John Fresh, LLC. All rights reserved.</span>
           </div>
           <div className="flex items-center text-primary">
-            <span className="text-primary">Part of the @<span><a href="https://www.enjoythevi.com">enjoythevi</a></span> family.</span>
+            <span className="text-primary">Part of the @<span><a href="bit.ly/sjfresh01">enjoythevi</a></span> family.</span>
             <a href="https://ilanlyfe.com" aria-label="ilanlyfe.com Link" target="_blank" className="text-primary">
               {/* <ilanlyfe className="inline-block h-6 ml-4 text-primary" alt="ilanlyfe.com Logo" /> */}
             </a>

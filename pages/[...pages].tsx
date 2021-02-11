@@ -21,7 +21,6 @@ export async function getStaticProps({
   const { pages } = await getAllPages({ preview, config })
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
-console.log(pages)
   const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
   const data =
     pageItem &&
@@ -32,7 +31,6 @@ console.log(pages)
     // We throw to make sure this fails at build time as this is never expected to happen
     throw new Error(`Page with slug '${slug}' not found`)
   }
-console.log(params)
   return {
     props: { ...defatultPageProps, pages, page },
     revalidate: 60 * 60, // Every hour
@@ -64,6 +62,7 @@ export async function getStaticPaths({ locales }: GetStaticPathsContext) {
 export default function Pages({
   page,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(page);
   return (
     <div className="max-w-2xl mx-auto py-20">
       {page?.body && <Text html={page.body} />}
