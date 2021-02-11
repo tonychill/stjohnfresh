@@ -30,7 +30,7 @@ const Head: FC<Props> = ({ categories, brands, newestProducts }) => {
               </li>
             ))}
           </ul>
-          <ul className="">
+          {/* <ul className="">
             <li className="py-1 text-base font-bold tracking-wide">
               <Link href={getDesignerPath('')}>
                 <a>All Designers</a>
@@ -43,7 +43,7 @@ const Head: FC<Props> = ({ categories, brands, newestProducts }) => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div className="flex-1">
