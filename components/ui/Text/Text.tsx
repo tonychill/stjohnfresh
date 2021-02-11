@@ -38,6 +38,7 @@ const Text: FunctionComponent<Props> = ({
     | React.ComponentType<any>
     | string = componentsMap![variant!]
 
+  console.log(html);
   const htmlContentProps = html
     ? {
         dangerouslySetInnerHTML: { __html: html },
