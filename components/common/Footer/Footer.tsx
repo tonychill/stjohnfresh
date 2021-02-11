@@ -82,7 +82,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </ul>
           </div>
-          <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
+          {/* <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
             <div className="flex space-x-6 items-center h-10">
               <a
                 aria-label="Github Repository"
@@ -93,14 +93,14 @@ const Footer: FC<Props> = ({ className, pages }) => {
               </a>
               <I18nWidget />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4">
           <div>
             <span>&copy; 2020 St. John Fresh, LLC. All rights reserved.</span>
           </div>
           <div className="flex items-center text-primary">
-            <span className="text-primary">Crafted by Tony Hill</span>
+            <span className="text-primary">Part of the @<span><a href="https://www.enjoythevi.com">enjoythevi</a></span> family.</span>
             <a href="https://ilanlyfe.com" aria-label="ilanlyfe.com Link" target="_blank" className="text-primary">
               {/* <ilanlyfe className="inline-block h-6 ml-4 text-primary" alt="ilanlyfe.com Logo" /> */}
             </a>
