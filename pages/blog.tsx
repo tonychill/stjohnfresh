@@ -21,15 +21,10 @@ export default function Blog() {
       <div className="text-center pt-40 pb-56 bg-violet">
         <Container>
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
-            Welcome to Acme, the simplest way to start publishing with Next.js
+            Welcome to St. John Fresh. The simplest and most convenient way to order and get fresh food to your villa.
           </h2>
           <p className="mt-3 max-w-md mx-auto text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            The Yeezy BOOST 350 V2 lineup continues to grow. We recently had the
-            ‘Carbon’ iteration, and now release details have been locked in for
-            this ‘Natural’ joint. Revealed by Yeezy Mafia earlier this year, the
-            shoe was originally called ‘Abez’, which translated to ‘Tin’ in
-            Hebrew. It’s now undergone a name change, and will be referred to as
-            ‘Natura`
+            Nothing here yet. But it is coming soon!!!
           </p>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-12">
             <div className="flex">
@@ -54,7 +49,7 @@ export default function Blog() {
       </div>
       <Container>
         <div className="-mt-96 mx-auto">
-          <img src="/jacket.png" alt="Jacket" />
+          <img src="https://img.favpng.com/19/11/25/basket-of-fruit-food-gift-baskets-hamper-png-favpng-EiavRAYGFUZU7TNYwhhHiggqe.jpg" alt="Jacket" />
         </div>
         {/** Replace by HTML Content */}
         <div className="text-lg leading-7 font-medium py-6 text-justify max-w-6xl mx-auto">

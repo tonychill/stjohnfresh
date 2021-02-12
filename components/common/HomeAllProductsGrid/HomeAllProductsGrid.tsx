@@ -18,8 +18,8 @@ const Head: FC<Props> = ({ categories, brands, newestProducts }) => {
         <div className={s.aside}>
           <ul className="mb-10">
             <li className="py-1 text-base font-bold tracking-wide">
-              <Link href={getCategoryPath('')}>
-                <a>All Categories</a>
+              <Link href={getCategoryPath('')}> 
+                <a>Everything</a>
               </Link>
             </li>
             {categories.map((cat: any) => (

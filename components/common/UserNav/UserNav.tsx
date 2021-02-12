@@ -27,6 +27,21 @@ const UserNav: FC<Props> = ({ className, children, ...props }) => {
     <nav className={cn(s.root, className)}>
       <div className={s.mainContainer}>
         <ul className={s.list}>
+          <li className={s.item}>
+            <Link href="/freshies">
+              <a className={s.link}>Freshies</a>
+            </Link>
+          </li>   
+          <li className={s.item}>
+            <Link href="/restaurants">
+              <a className={s.link}>Restaurants</a>
+            </Link>
+          </li>   
+          <li className={s.item}>
+            <Link href="/search?q=packages">
+              <a className={s.link}>Packages</a>
+            </Link>
+          </li>
           <li className={s.item} onClick={toggleSidebar}>
             <Bag />
             {itemsCount > 0 && <span className={s.bagCount}>{itemsCount}</span>}
