@@ -27,15 +27,15 @@ export async function getStaticProps({
   const config = getConfig({ locale })
   const { pages } = await getAllPages({ config, preview })
   const { categories, brands } = await getSiteInfo({ config, preview })
-  const keys = {
-    storfront_api_token: process.env.BIGCOMMERCE_STOREFRONT_API_TOKEN,
-    storfront_api_url: process.env.BIGCOMMERCE_STOREFRONT_API_URL,
-    store_api_token: process.env.BIGCOMMERCE_STORE_API_TOKEN,
-    store_api_url: process.env.BIGCOMMERCE_STORE_API_URL,
-    store_api_client_id: process.env.BIGCOMMERCE_STORE_API_CLIENT_ID,
-  }
+  // const keys = {
+  //   storfront_api_token: process.env.BIGCOMMERCE_STOREFRONT_API_TOKEN,
+  //   storfront_api_url: process.env.BIGCOMMERCE_STOREFRONT_API_URL,
+  //   store_api_token: process.env.BIGCOMMERCE_STORE_API_TOKEN,
+  //   store_api_url: process.env.BIGCOMMERCE_STORE_API_URL,
+  //   store_api_client_id: process.env.BIGCOMMERCE_STORE_API_CLIENT_ID,
+  // }
   return {
-    props: { pages, categories, brands, keys },
+    props: { pages, categories, brands },
   }
 }
 
@@ -49,7 +49,6 @@ const SORT = Object.entries({
 export default function Search({
   categories,
   brands,
-  keys,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)
@@ -57,10 +56,7 @@ export default function Search({
   const router = useRouter()
   const { asPath } = router
   const { q, sort } = router.query
-  console.log(keys)
-  console.log('q: ', q)
-  console.log('sort: ', sort)
-  console.log(asPath)
+  
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
