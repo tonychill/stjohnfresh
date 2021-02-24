@@ -27,9 +27,15 @@ export async function getStaticProps({
   const config = getConfig({ locale })
   const { pages } = await getAllPages({ config, preview })
   const { categories, brands } = await getSiteInfo({ config, preview })
-
+  const keys = {
+    storfront_api_token: process.env.BIGCOMMERCE_STOREFRONT_API_TOKEN,
+    storfront_api_url: process.env.BIGCOMMERCE_STOREFRONT_API_URL,
+    store_api_token: process.env.BIGCOMMERCE_STORE_API_TOKEN,
+    store_api_url: process.env.BIGCOMMERCE_STORE_API_URL,
+    store_api_client_id: process.env.BIGCOMMERCE_STORE_API_CLIENT_ID,
+  }
   return {
-    props: { pages, categories, brands },
+    props: { pages, categories, brands, keys },
   }
 }
 
@@ -43,6 +49,7 @@ const SORT = Object.entries({
 export default function Search({
   categories,
   brands,
+  keys,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)
@@ -50,8 +57,9 @@ export default function Search({
   const router = useRouter()
   const { asPath } = router
   const { q, sort } = router.query
-  console.log("q: ", q)
-  console.log("sort: ", sort)
+  console.log(keys)
+  console.log('q: ', q)
+  console.log('sort: ', sort)
   console.log(asPath)
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
@@ -156,33 +164,34 @@ export default function Search({
                       console.log(cat)
                       console.log(brand)
                       return (
-                      <li
-                        key={cat.path}
-                        className={cn(
-                          'block text-sm leading-5 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900',
-                          {
-                            underline:
-                              activeCategory?.entityId === cat.entityId,
-                          }
-                        )}
-                      >
-                        <Link
-                          href={{
-                            pathname: getCategoryPath(cat.path, brand),
-                            query,
-                          }}
-                        >
-                          <a
-                            onClick={(e) => handleClick(e, 'categories')}
-                            className={
-                              'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
+                        <li
+                          key={cat.path}
+                          className={cn(
+                            'block text-sm leading-5 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900',
+                            {
+                              underline:
+                                activeCategory?.entityId === cat.entityId,
                             }
+                          )}
+                        >
+                          <Link
+                            href={{
+                              pathname: getCategoryPath(cat.path, brand),
+                              query,
+                            }}
                           >
-                            {cat.name}
-                          </a>
-                        </Link>
-                      </li>
-                    )})}
+                            <a
+                              onClick={(e) => handleClick(e, 'categories')}
+                              className={
+                                'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
+                              }
+                            >
+                              {cat.name}
+                            </a>
+                          </Link>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -454,7 +463,7 @@ export default function Search({
                 </div>
               </div>
             </div>*/}
-          </div> 
+          </div>
         </div>
       </div>
     </Container>
